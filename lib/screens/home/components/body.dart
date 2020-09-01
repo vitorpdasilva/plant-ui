@@ -13,6 +13,11 @@ class Body extends StatelessWidget {
           child: Stack(
             children: <Widget>[
               Container(
+                padding: EdgeInsets.only(
+                  left: kDefaultPadding,
+                  right: kDefaultPadding,
+                  bottom: 36 + kDefaultPadding,
+                ),
                 height: size.height * 0.2 - 27,
                 decoration: BoxDecoration(
                   color: kPrimaryColor,
@@ -21,6 +26,17 @@ class Body extends StatelessWidget {
                     bottomRight: Radius.circular(36),
                   )  
                 ),
+                child: Row(
+                  children: <Widget>[
+                    Text(
+                      'Hello Vitor!', 
+                      style: Theme.of(context).textTheme.headline5.copyWith(
+                        color: Colors.white, fontWeight: FontWeight.bold)
+                    ),
+                    Spacer(),
+                    Image.asset("assets/images/logo.png")
+                  ],
+                )
               ),
               Positioned(
                 bottom: 0,
